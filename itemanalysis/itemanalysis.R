@@ -2,21 +2,10 @@
 # WhatsApp : +6285227746673
 # IG : @olahdatasemarang_
 # Classicial Test Theory Item Analysis for Multiple Choice Test Items Use Package itemanalysis With (In) R Software
-install.packages("readxl")
-install.packages("httr")
 install.packages("itemanalysis")
-library("httr")
-library("readxl")
 library("itemanalysis")
 # Import Data Excel Into R From Github Olah Data Semarang (timbulwidodostp)
-github_link <- "https://github.com/timbulwidodostp/itemanalysis/raw/main/itemanalysis/itemanalysis.xlsx"
-temp_file <- tempfile(fileext = ".xlsx")
-req <- GET(github_link, 
-# authenticate using GITHUB_PAT
-authenticate(Sys.getenv("GITHUB_PAT"), ""),
-# write result to disk
-write_disk(path = temp_file))
-itemanalysis <- readxl::read_excel(temp_file)
+itemanalysis = read.csv("https://github.com/timbulwidodostp/itemanalysis/raw/main/itemanalysis/itemanalysis.csv",sep = ";")
 # Estimate Classicial Test Theory Item Analysis for Multiple Choice Test Items Use Package itemanalysis With (In) R Software
 # Key response vector
 key <- c("A","D","C","B","C","B","C","D","A","D","C","A","D","C","A",
