@@ -2,7 +2,15 @@
 # WhatsApp : +6285227746673
 # IG : @olahdatasemarang_
 # Classicial Test Theory Item Analysis for Multiple Choice Test Items Use Package itemanalysis With (In) R Software
+install.packages("stringi")
+install.packages("SparseM")
+install.packages("munsell")
+install.packages("ggplot2")
 install.packages("itemanalysis")
+library("stringi")
+library("SparseM")
+library("munsell")
+library("ggplot2")
 library("itemanalysis")
 # Import Data Excel Into R From Github Olah Data Semarang (timbulwidodostp)
 itemanalysis = read.csv("https://github.com/timbulwidodostp/itemanalysis/raw/main/itemanalysis/itemanalysis.csv",sep = ";")
